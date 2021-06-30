@@ -5,16 +5,18 @@ let instructor = {
     favoriteNumbers: [1, 2, 3, 4]
 }
 
-// Lists all keys of Object in an array
+//Insertion, Removal, Searching, Access.   O(1)
+
+// Lists all keys of Object in an array.   O(N)
 Object.keys(instructor)
 
-// Lists all values of Object in an array
+// Lists all values of Object in an array.  O(N)
 Object.values(instructor)
 
-// Lists all [key, values] in an object. Each [key, value gets its own array]
+// Lists all [key, values] in an object. Each [key, value gets its own array].  O(N)
 Object.entries(instructor)
 
-// Returns boolean whether the key exists in the object or not (true/false)
+// Returns boolean whether the key exists in the object or not (true/false).   O(1)
 instructor.hasOwnProperty("firstName")
 
 
@@ -32,4 +34,13 @@ names.pop("Kevin")
 names.unshift("Kevin")
 //shifting to an Array is O(N)
 names.shift("Kevin")
-
+//.concat is O(N)
+names.concat()
+//.slice is O(N)
+names.slice()
+//.splice is O(N)
+names.splice()
+//.forEach .map .filter .reduce etc. is O(N)
+names.forEach()
+//.sort is O(N * log N)
+names.shift("Kevin")
