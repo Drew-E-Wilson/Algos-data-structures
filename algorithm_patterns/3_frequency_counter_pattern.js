@@ -34,40 +34,27 @@ same([1, 2, 3, 2], [9, 1, 4, 4])
 // Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed be rearranging the letters of another word. Ex. cinema forms iceman.
 
 function anagram(str1, str2) {
-    //  put both strings into different objects. will need 2 objects total
-    let obj1 = {};
-    let obj2 = {};
-    //  check to see if the strings lengths are the same. if not return false
     if (str1.length !== str2.length) {
-        console.log(false)
+        console.log("false")
         return false
     }
-    //  Loop through each string and add the letters to the objects. 2 loops
-    // for..of loop returns the keys {name: 'drew} returns 'name'
-    // for..in loop returns the position(index) number ex. 0, 1, 2, 3, 4
-    for (let val of str1) {
-        console.log(val);
-        obj1[val] = (obj1[val] || 0) + 1
+    const obj = {};
+    for (let letter of str1) {
+        obj[letter] ? obj[letter] += 1 : obj[letter] = 1;
     }
-    for (let val of str2) {
-        obj2[val] = (obj2[val] || 0) + 1
-    }
-    console.log(obj1)
-    console.log(obj2)
-    //  check if all the keys in the first object match the ones in the second
-    for (let key in obj1) {
-        if (!(key in obj2)) {
+    console.log(obj)
+    for (let letter of str2) {
+        if (!obj[letter]) {
             console.log("false")
-            return false;
-        }
-        //  check if the number of values of the keys in the second object match the ones of the first object.
-        if (obj1[key] !== obj2[key]) {
-            console.log("false")
-            return false;
+            return false
+        } else {
+            obj[letter] -= 1;
+            console.log(obj)
         }
     }
     console.log("true")
-    return true;
-    //  if they do, return true. 
+    return true
 }
-anagram("whsyme", "emwdhy")
+anagram("ppyah", "happy")
+
+
