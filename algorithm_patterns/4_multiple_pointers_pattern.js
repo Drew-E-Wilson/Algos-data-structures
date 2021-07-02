@@ -1,7 +1,7 @@
 // MULTIPLE POINTERS PATTERN
 
 //PROBLEM 1
-// Write a function called sumZero which acceots a sorted array f integers. The function should find the first pair where the sum is 0. Return an array that includes both values tht sum to zero or undefined if a pair does not exist. 
+// Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist. 
 
 function sumZero(arr) {
     let left = 0;
@@ -62,3 +62,71 @@ function numberOfUniqueValues(arr) {
     return i + 1;
 }
 numberOfUniqueValues([])
+
+
+// PROBLEM 3
+// Write a function called 'areThereDuplicates' which accepts a variable number of arguments, and checks whether there are any duplicates amond the arguments passed in. 
+const areThereDuplicates = (...nums) => {
+    let obj = {};
+    for (let mee of nums) {
+        if (obj[mee] === 1) {
+            obj[mee] += 1
+            console.log("true")
+            return true
+        } else {
+            obj[mee] = 1;
+        }
+    }
+    for (let moo in obj) {
+        if (obj[moo] <= 1) {
+            console.log("false");
+            return false
+        }
+    }
+    console.log(obj)
+}
+
+// Solution 2
+function areThereDuplicatesMaybe() {
+    // console.log(arguments)
+    console.log(new Set(arguments).size !== arguments.length);
+    return new Set(arguments).size !== arguments.length;
+}
+
+areThereDuplicatesMaybe(1, 2, 3, 3, 4, 5)
+areThereDuplicatesMaybe("a", "b", "c", "d", "e", "f")
+
+
+// PROBLEM 4
+// Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equels the target average. There may be more than one pair that matches the average target.
+
+//create a function averagePair
+function averagePair(arr, target) {
+    //create an empty array to contain your answers. 
+    let result = [];
+    //create a first index counter set to 0
+    let first = 0;
+    // create a last index counter .length -1 
+    let last = arr.length - 1;
+    //loop over input while loop?
+    while (first < arr.length / 2) {
+        let sum = arr[first] + arr[last];
+        if (sum / 2 === target) {
+            // if statement. take both numbers and divide by two.
+            result.push([arr[first], arr[last]]);
+            //if numbers average = target, add the empty array
+            first++
+            // else incriment the numbers
+        } else if (sum / 2 > target) {
+            last--
+        } else {
+            first++
+        }
+    }
+    console.log(result);
+    return result
+}
+averagePair([1, 3, 4, 6], 3.5)
+
+// PROBLEM 5 
+// Write a functin called isSubsequences which takes in two string and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check if the characts in the first string appear somewhere in the second string, without their order changing. 

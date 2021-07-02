@@ -58,3 +58,35 @@ function anagram(str1, str2) {
 anagram("ppyah", "happy")
 
 
+//Question 3 
+// Write a function called 'sameFrequency'. Given two positive integers, find out if the two numbers have the same frequency of digits. 
+
+function sameFrequency(dig1, dig2) {
+    arr1 = dig1.toString();
+    arr2 = dig2.toString();
+    obj1 = {};
+    if (dig1.length !== dig2.length) {
+        console.log('false')
+        return false
+    }
+    for (let num of arr1) {
+        if (obj1[num] > 0) {
+            obj1[num] += 1
+        } else {
+            obj1[num] = 1;
+        }
+        // obj1[num] ? obj1[num] += 1 : obj1[num] = 1;  (Turnerary: Shorter way of writing if statement )
+    }
+    for (let num of arr2) {
+        if (!obj1[num]) {
+            console.log("false");
+            return false;
+        } else {
+            obj1[num] -= 1;
+        }
+    }
+    console.log('true')
+    return true
+}
+sameFrequency(123, 123);
+
