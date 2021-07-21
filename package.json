@@ -1,0 +1,23 @@
+{
+  "name": "algo_data_structure_course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1_objects_arrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drew-E-Wilson/Algos-data-structures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drew-E-Wilson/Algos-data-structures/issues"
+  },
+  "homepage": "https://github.com/Drew-E-Wilson/Algos-data-structures#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

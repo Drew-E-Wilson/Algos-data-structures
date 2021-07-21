@@ -188,3 +188,64 @@ function isSubsequences(str1, str2) {
     if (str2[0] === str1[0]) return isSubsequence(str1.slice(1), str2.slice(1))
     return isSubsequence(str1, str2.slice(1))
 }
+
+
+
+// Problem 6
+const swapping = (arr) => {
+    let higherLeft = 0;
+    let higherRight = 0;
+    if (arr.length % 2 === 0) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            higherLeft++
+            // console.log(arr[i])
+        }
+        for (let i = arr.length / 2; i < arr.length; i++) {
+            higherRight++
+            // console.log(arr[i])
+        }
+    }
+    if (arr.length % 2 !== 0) {
+        arr.length / 2 - 1;
+        for (let i = 0; i < arr.length / 2; i++) {
+            higherLeft++
+            // console.log(arr[i])
+        }
+        for (let i = 0; i < arr.length / 2; i++) {
+            higherRight++
+            // console.log(arr[i])
+        }
+    }
+
+    let totalSwap = 0;
+
+    if (higherRight = higherLeft) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[i + 1]) {
+                arr[i] = 0;
+                arr[i + 1] = 1;
+                totalSwap++;
+            }
+        }
+    } else if (higherRight < higherLeft) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[i + 1]) {
+                arr[i] = 0;
+                arr[i + 1] = 1;
+                totalSwap++;
+            }
+        }
+    } else {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < arr[i + 1]) {
+                arr[i] = 1;
+                arr[i + 1] = 0;
+                totalSwap++;
+            }
+        }
+    }
+    console.log(totalSwap);
+}
+
+
+swapping([1, 0, 1, 1, 0, 1, 1, 1])
