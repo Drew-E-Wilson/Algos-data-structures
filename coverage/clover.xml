@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1626887393140" clover="3.2.0">
+  <project timestamp="1626887393140" name="All files">
+    <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3" elements="26" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="2" files="3" classes="3"/>
+    <package name="jest_testing">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="cloneArray.js" path="/Users/drewwilson/Desktop/coding_personal/algo_data_structure_course/jest_testing/cloneArray.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="sum.js" path="/Users/drewwilson/Desktop/coding_personal/algo_data_structure_course/jest_testing/sum.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="jest_testing.HackerRank">
+      <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="gradingStudents.js" path="/Users/drewwilson/Desktop/coding_personal/algo_data_structure_course/jest_testing/HackerRank/gradingStudents.js">
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
