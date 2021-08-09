@@ -1,4 +1,5 @@
 // BUBBLE SORT. if used with noSwap variable, time complexity is O(N);
+// Best if used when data is almost completely sorted already;
 
 // PROBLEM 1
 // Start looping from a variable called i, the end of the array towards the beginning
